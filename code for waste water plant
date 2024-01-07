@@ -1,0 +1,70 @@
+#ifndef _WASTE WATER TREATMENT PLANT_H
+#define _WASTE WATER TREATMENT PLANT_H
+
+class Waste Water treatment plant {
+};
+
+#endif //_WASTE WATER TREATMENT PLANT_H
+
+
+#ifndef _TRICKLING FILTER_H
+#define _TRICKLING FILTER_H
+
+#include "structure.h"
+
+
+class Trickling Filter: public structure {
+};
+
+#endif //_TRICKLING FILTER_H
+
+#ifndef _TECHNICAL EQUIPMENT_H
+#define _TECHNICAL EQUIPMENT_H
+
+class Technical equipment {
+public: 
+    void Scraper Installation;
+    void Rotary Distributor;
+    void Pump;
+    void Mixer;
+    void Aeration Installation;
+    void Measuring Instrument;
+};
+
+#endif //_TECHNICAL EQUIPMENT_H
+
+#ifndef _STRUCTURE_H
+#define _STRUCTURE_H
+
+class structure {
+};
+
+#endif //_STRUCTURE_H
+
+#ifndef _RACK_H
+#define _RACK_H
+
+#include "structure.h"
+
+
+class Rack: public structure {
+};
+
+#endif //_RACK_H
+
+#ifndef _BASIN_H
+#define _BASIN_H
+
+#include "structure.h"
+
+
+class Basin: public structure {
+public: 
+    void Grit Chamber;
+    void Aeration Tank;
+    void Primary Settlement Tank;
+    void Secondary Settlement Tank;
+    void Settlement Tank;
+};
+
+#endif //_BASIN_H
