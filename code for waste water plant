@@ -1,53 +1,57 @@
-#ifndef _WASTE WATER TREATMENT PLANT_H
-#define _WASTE WATER TREATMENT PLANT_H
+#include <iostream>
 
-class Waste Water treatment plant {
+#ifndef _WASTE_WATER_TREATMENT_PLANT_H
+#define _WASTE_WATER_TREATMENT_PLANT_H
+
+class WasteWaterTreatmentPlant {
 };
 
-#endif //_WASTE WATER TREATMENT PLANT_H
-
-
-#ifndef _TRICKLING FILTER_H
-#define _TRICKLING FILTER_H
-
-#include "structure.h"
-
-
-class Trickling Filter: public structure {
-};
-
-#endif //_TRICKLING FILTER_H
-
-#ifndef _TECHNICAL EQUIPMENT_H
-#define _TECHNICAL EQUIPMENT_H
-
-class Technical equipment {
-public: 
-    void Scraper Installation;
-    void Rotary Distributor;
-    void Pump;
-    void Mixer;
-    void Aeration Installation;
-    void Measuring Instrument;
-};
-
-#endif //_TECHNICAL EQUIPMENT_H
+#endif //_WASTE_WATER_TREATMENT_PLANT_H
 
 #ifndef _STRUCTURE_H
 #define _STRUCTURE_H
 
-class structure {
+class Structure {
 };
 
 #endif //_STRUCTURE_H
 
+#ifndef _TECHNICAL_EQUIPMENT_H
+#define _TECHNICAL_EQUIPMENT_H
+
+class TechnicalEquipment {
+public: 
+    void ScraperInstallation() {
+        std::cout << "Scraper installation performed." << std::endl;
+    }
+
+    void RotaryDistributor() {
+        std::cout << "Rotary distributor operation performed." << std::endl;
+    }
+
+    void Pump() {
+        std::cout << "Pump operation performed." << std::endl;
+    }
+
+    void Mixer() {
+        std::cout << "Mixer operation performed." << std::endl;
+    }
+
+    void AerationInstallation() {
+        std::cout << "Aeration installation performed." << std::endl;
+    }
+
+    void MeasuringInstrument() {
+        std::cout << "Measuring instrument used." << std::endl;
+    }
+};
+
+#endif //_TECHNICAL_EQUIPMENT_H
+
 #ifndef _RACK_H
 #define _RACK_H
 
-#include "structure.h"
-
-
-class Rack: public structure {
+class Rack : public Structure {
 };
 
 #endif //_RACK_H
@@ -55,16 +59,46 @@ class Rack: public structure {
 #ifndef _BASIN_H
 #define _BASIN_H
 
-#include "structure.h"
-
-
-class Basin: public structure {
+class Basin : public Structure {
 public: 
-    void Grit Chamber;
-    void Aeration Tank;
-    void Primary Settlement Tank;
-    void Secondary Settlement Tank;
-    void Settlement Tank;
+    void GritChamber() {
+        std::cout << "Grit chamber operation performed." << std::endl;
+    }
+
+    void AerationTank() {
+        std::cout << "Aeration tank operation performed." << std::endl;
+    }
+
+    void PrimarySettlementTank() {
+        std::cout << "Primary settlement tank operation performed." << std::endl;
+    }
+
+    void SecondarySettlementTank() {
+        std::cout << "Secondary settlement tank operation performed." << std::endl;
+    }
+
+    void SettlementTank() {
+        std::cout << "Settlement tank operation performed." << std::endl;
+    }
 };
 
 #endif //_BASIN_H
+
+int main() {
+    TechnicalEquipment equipment;
+    equipment.ScraperInstallation();
+    equipment.RotaryDistributor();
+    equipment.Pump();
+    equipment.Mixer();
+    equipment.AerationInstallation();
+    equipment.MeasuringInstrument();
+
+    Basin basin;
+    basin.GritChamber();
+    basin.AerationTank();
+    basin.PrimarySettlementTank();
+    basin.SecondarySettlementTank();
+    basin.SettlementTank();
+
+    return 0;
+}
